@@ -1,0 +1,30 @@
+﻿@page "/"
+
+
+
+<h2>Hello, MGT world!</h2>
+
+<p>
+    Welcome to your new app. It uses the Microsoft Graph Toolkit to log you in and shows details for your user.
+    <br />
+    Click on the sign in button to login. The very first time the pop up will ask you for consent for your Azure AAD app.
+</p>
+
+<div>
+    <mgt-teams-provider 
+        client-id="f676f828-bee1-4fe5-ac7e-db0b1dac0fb4"
+        auth-popup-url="https://mgtteamsblazorserver.azurewebsites.net/auth"
+        authority="https://login.microsoftonline.com/thomy.onmicrosoft.com">
+    </mgt-teams-provider>
+    <mgt-login></mgt-login>
+    <mgt-person-card person-query="me"></mgt-person-card>
+</div>
+<div>
+    <mgt-agenda
+        group-by-day
+        date="October 18, 2020"
+        days="3"
+     ></mgt-agenda>
+</div>
+
+
